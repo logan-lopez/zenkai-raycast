@@ -1,0 +1,8 @@
+node_modules
+raycast-env.d.ts
+.test-build
+dist
+.DS_Store
+
+# ray build emits the command bundle to the project root
+/clean-prompt.js
