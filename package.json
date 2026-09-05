@@ -26,12 +26,41 @@
         "whitespace",
         "tidy"
       ]
+    },
+    {
+      "name": "search-characters",
+      "title": "Search Characters",
+      "subtitle": "SillyTavern",
+      "description": "Search and filter the SillyTavern character library by name, tag or creator, with the full card and its chats one keystroke away.",
+      "mode": "view",
+      "keywords": [
+        "sillytavern",
+        "st",
+        "character",
+        "card",
+        "roleplay"
+      ]
+    },
+    {
+      "name": "browse-card-art",
+      "title": "Browse Card Art",
+      "subtitle": "SillyTavern",
+      "description": "Grid of SillyTavern character card art, searchable and filterable by tag.",
+      "mode": "view",
+      "keywords": [
+        "sillytavern",
+        "st",
+        "character",
+        "avatar",
+        "grid"
+      ]
     }
   ],
   "tools": [],
   "dependencies": {
     "@raycast/api": "^1.104.20",
-    "@raycast/utils": "^2.2.7"
+    "@raycast/utils": "^2.2.7",
+    "@st-mcp/core": "file:../../../../Documents/Claude/Projects/SillyTavern-MCP/packages/core"
   },
   "devDependencies": {
     "@raycast/eslint-config": "^2.2.0",
@@ -49,5 +78,24 @@
     "prepublishOnly": "echo \"\\n\\nIt seems like you are trying to publish the Raycast extension to npm.\\n\\nIf you did intend to publish it to npm, remove the \\`prepublishOnly\\` script and rerun \\`npm publish\\` again.\\nIf you wanted to publish it to the Raycast Store instead, use \\`npm run publish\\` instead.\\n\\n\" && exit 1",
     "publish": "npx @raycast/api@latest publish",
     "test": "tsc -p tsconfig.test.json && node --test .test-build/tests/*.test.js"
-  }
+  },
+  "preferences": [
+    {
+      "name": "userDir",
+      "type": "directory",
+      "required": false,
+      "title": "SillyTavern User Directory",
+      "description": "The data/<user> folder SillyTavern reads characters, chats and worlds from. Defaults to ~/SillyTavern-Launcher/SillyTavern/data/default-user.",
+      "default": "~/SillyTavern-Launcher/SillyTavern/data/default-user"
+    },
+    {
+      "name": "stUrl",
+      "type": "textfield",
+      "required": false,
+      "title": "SillyTavern URL",
+      "description": "Where the running SillyTavern web UI lives, for the Open SillyTavern action.",
+      "default": "http://localhost:8000",
+      "placeholder": "http://localhost:8000"
+    }
+  ]
 }

@@ -6,3 +6,5 @@ dist
 
 # ray build emits the command bundle to the project root
 /clean-prompt.js
+/search-characters.js
+/browse-card-art.js
